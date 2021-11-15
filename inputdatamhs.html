@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dashboard - Input Data Mahasiswa</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Dashboard</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fa fa-bar-chart-o"></i> Akademik</a></li>
+			 
+			 <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Menu Mahasiswa <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="absensi_m.html">Absensi</a></li>
+                <li><a href="inputdatamhs.html">Input Data MHS</a></li>
+              </ul>
+            </li>
+			  
+            <li><a href="#"><i class="fa fa-edit"></i> Administrasi</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Rafif Parisya Awandi <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">0</span></a></li>
+                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="page-wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Input Data Mahasiswa</h1>
+            <ol class="breadcrumb">
+              <li><a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+				<li><a href="#"><i class="fa fa-caret-square-o-down"></i> Menu Mahasiswa</a></li>
+				<li class="active" ><a href="inputdatamhs.php"></i> Input Data MHS</a></li>
+            </ol>
+            <div class="alert alert-info alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              Pastikan isi seluruh kolom dengan benar.
+            </div>
+        </div>
+		
+		<div class="row">
+          <div class="col-lg-12">
+			<form action="input.php" method="post" enctype="multipart/form-data" id="form1">
+			  <table width="470" height="511" border="0" align="left" cellpadding="0" cellspacing="0">
+			    <tbody>
+			      <tr>
+			        <td width="92">Nama</td>
+			        <td width="19" align="center">:</td>
+			        <td width="359"><input name="nama" type="text" required="required" id="textfield" placeholder="Isikan Nama Lengkap" size="35"></td>
+		          </tr>
+			      <tr>
+			        <td>Username</td>
+			        <td align="center">:</td>
+			        <td><input name="username" type="text" required="required" id="textfield2" placeholder="Isi Username" size="35"></td>
+		          </tr>
+			      <tr>
+			        <td>Password</td>
+			        <td align="center">:</td>
+			        <td><input name="password" type="password" required="required" id="password" placeholder="Isi password" size="35"></td>
+		          </tr>
+			      <tr>
+			        <td>Email</td>
+			        <td align="center">:</td>
+			        <td><input name="email" type="email" required="required" id="email" placeholder="Isi Email" size="35"></td>
+		          </tr>
+			      <tr>
+			        <td height="64">Jenis Kelamin</td>
+			        <td align="center">:</td>
+			        <td align="left" valign="middle"><p>
+			          <select name="jeniskelamin" id="jeniskelamin">
+			            <option value="Laki-Laki">Laki-Laki</option>
+			            <option value="Perempuan">Perempuan</option>
+		              </select>
+			        </p></td>
+		          </tr>
+			      <tr>
+			        <td>Tanggal Lahir</td>
+			        <td align="center">:</td>
+			        <td align="left" valign="middle"><input name="tanggallahir" type="date" required="required" id="tanggallahir" title="YYYY-MM-DD"></td>
+		          </tr>
+			      <tr>
+			        <td>Negara</td>
+			        <td align="center">:</td>
+			        <td><input name="negara" type="text" required="required" id="negara" size="35"></td>
+		          </tr>
+			      <tr>
+			        <td>Kota</td>
+			        <td align="center">:</td>
+			        <td><select name="kota" required="required" id="kota">
+			          <option value="Aceh">Aceh</option>
+			          <option value="Bandung">Bandung</option>
+			          <option value="Pati">Pati</option>
+			          <option value="Semarang">Semarang</option>
+			          <option value="Yogyakarta">Yogyakarta</option>
+		            </select></td>
+		          </tr>
+			      <tr>
+			        <td height="47">Biografi</td>
+			        <td align="center">:</td>
+			        <td><textarea name="biografi" cols="31" rows="5" id="biografi"></textarea></td>
+		          </tr>
+			      <tr>
+			        <td colspan="3" align="center" valign="middle"><input type="submit" name="Simpan" id="submit" value="Simpan"></td>
+		          </tr>
+		        </tbody>
+		      </table>
+		    </form>
+          </div>
+        </div>
+ 
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="js/morris/chart-data-morris.js"></script>
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+
+  </body>
+</html>
